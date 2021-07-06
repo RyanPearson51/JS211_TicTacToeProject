@@ -63,12 +63,12 @@ const checkForWin = () => {
 }
 
 const ticTacToe = (row, column) => {
-  let moves = 1;
-  while(moves<5){
+  let turn = 1;
+  while(turn<5){
     board[row][column] = playerTurn; 
-    moves++;  
+    turn++;  
   }
-  if(moves >= 5 && checkForWin()){
+  if(turn >= 5 && checkForWin()){
     console.log('Reset Board');
   }else{
     board[row][column] = playerTurn; 
